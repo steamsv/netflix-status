@@ -306,8 +306,10 @@ func main() {
 					ShellPrinter(8)
 					ShellPrinter(9)
 					fmt.Println("\n\033[1;34m判断结果：完整支持Netflix解锁")
+					report(true)
 				} else {
 					fmt.Println("\033[0;32m您的出口IP完整解锁Netflix，支持非自制剧的观看\033[0m")
+					report(true)
 				}
 				fmt.Println("\033[0;36m原生IP地域解锁信息：\033[1;36m" + FindCountry(ipv4CountryCode) + "区(" + strings.ToUpper(strings.Split(ipv4CountryCode, "-")[0]) + ") NetFlix 原生IP\033[0m")
 			}
@@ -379,6 +381,7 @@ func main() {
 				report(true)
 			} else {
 				fmt.Println("\033[0;32m您的出口IP完整解锁Netflix，支持非自制剧的观看\033[0m")
+				report(true)
 			}
 			fmt.Println("\033[0;36m原生IP地域解锁信息：\033[1;36m" + FindCountry(ipv6CountryCode) + "区(" + strings.ToUpper(strings.Split(ipv6CountryCode, "-")[0]) + ") NetFlix 原生IP\033[0m")
 		}
