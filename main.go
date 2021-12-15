@@ -406,9 +406,9 @@ func report(unlock bool) {
 	}
 	result := func(unlock bool) string {
 		if unlock {
-			return "ok"
+			return "OK"
 		}
-		return "no"
+		return "NO"
 	}
 	uri := fmt.Sprintf("https://api.nicoimg.com/set?key=%s&value=%s", *hostname, result(unlock))
 	if resp, err := http.Get(uri); err == nil {
